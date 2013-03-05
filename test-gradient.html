@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Breakfast (modified)</title>
+    <style type="text/css">
+      body {
+        background: #add8e6;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myPrettyCanvas" width="320" height="404"></canvas>
+    <script type="text/javascript">
+      var canvasId = 'myPrettyCanvas',
+          canvas = document.getElementById(canvasId),
+          ctx = canvas.getContext('2d'),
+          grd;
+
+      // Transform to facilitate ellipse
+      ctx.setTransform(0.7920792079207921, 0, 0, 1, 0, 0);
+
+      // Create gradient
+      grd = ctx.createRadialGradient(202.000, 359.964, 0.000, 202.000, 191.900, 202.000);
+
+      // Add colors
+      grd.addColorStop(0.250, 'rgba(255, 153, 0, 0.15)');
+      grd.addColorStop(0.460, 'rgba(255, 191, 0, 1.000)');
+      grd.addColorStop(0.490, 'rgba(255, 255, 255, 1.000)');
+      grd.addColorStop(0.840, 'rgba(255, 255, 255, 1.000)');
+      grd.addColorStop(0.850, 'rgba(0, 0, 0, 1.000)');
+      grd.addColorStop(0.860, 'rgba(255, 255, 255, 1.000)');
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, 404.000, 404.000);
+    </script>
+  </body>
+</html>

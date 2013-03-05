@@ -1,0 +1,431 @@
+/* CSS reset by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
+
+a {
+  color: #4169e1;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  outline: 0;
+  text-decoration: underline;
+}
+
+a:active {
+  color: navy;
+}
+
+a:visited {
+  color: #2e8b57;
+}
+
+/* Fixes for Prettify Sunburst theme broken by CSS reset... */
+pre.prettyprint {
+  font-family: "Courier New", monospace;
+  font-size: 0.8em;
+  width: auto;
+}
+/* End Prettify fixes */
+
+.clear {
+  clear: both;
+  font-size: 0;
+  height: 0;
+}
+
+body {
+  font-family: Calibri, Helvetica, Arial, sans-serif !important;
+  padding: 25px;
+}
+
+input[type=number].ng-invalid {
+  background: #fee;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+
+h1 {
+  font-size: 3em;
+  float: left;
+}
+
+h3 {
+  font-style: italic;
+}
+
+.loading {
+  color: #222;
+  font-size: 1.7em;
+  font-style: italic;
+  font-family: cursive;
+  position: relative;
+  padding-right: 1.15em;
+  float: left;
+}
+
+.loading .ballWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0.3em;
+  width: 12px;
+  height: 12px;
+
+  -webkit-animation: loadingBallAnim 1s infinite linear;
+}
+
+.loading .ball {
+  position: absolute;
+  top: -0.3em;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+
+  box-shadow: inset 0 0 7px 0 #000;
+}
+
+@-webkit-keyframes loadingBallAnim {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.gradientCodeWrapper h2,
+.presetsWrapper h2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.titleCredit {
+  margin-bottom: 50px;
+  font-size: 0.3em;
+  display: block;
+  text-align: right;
+}
+
+.jPicker .Title {
+  visibility: hidden;
+  padding-top: 4px;
+}
+
+.jPicker .Grid {
+  margin-bottom: 5px;
+}
+
+.gradientEditorWrapper,
+.bigPreviewCanvasWrapper,
+.gradientCodeWrapper {
+  margin: 0 50px 50px 0;
+  float: left;
+}
+
+.gradientEditorWrapper,
+.bigPreviewCanvasWrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gradientEditorWrapper.hasActiveColorHandle {
+  margin-right: 48px;
+}
+
+[preview-canvas] {
+  background: url(../img/canvas-bg.png);
+}
+
+.bigPreviewCanvas {
+  border: 1px solid #000;
+  margin: 10px 0 15px;
+}
+
+.colorHandlesWorkAreaWrapper {
+  padding: 0 25px;
+  margin: 0 -25px;
+}
+
+.gradientEditorWrapper,
+.colorHandlesWorkArea {
+  width: 543px;
+}
+
+.colorHandlesWorkArea {
+  height: 66px;
+  position: relative;
+}
+
+.smallPreviewCanvas {
+  border: 1px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+[color-handle] {
+  padding: 0 5px;
+  font-size: 2em;
+
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+
+  transition: 0.1s bottom linear;
+  -webkit-transition: 0.1s bottom linear;
+  -moz-transition: 0.1s bottom linear;
+  -o-transition: 0.1s bottom linear;
+
+  text-shadow: 0 1px 3px #000;
+  filter: DropShadow(Color=#000000, OffX=0, OffY=1);
+}
+
+[color-handle]:hover:not(.dragging) {
+  bottom: -2px;
+}
+
+[new-color-handle-click-area] {
+  cursor: none;
+  width: 100%;
+  height: 42%;
+  position: absolute;
+  bottom: 2%;
+}
+
+[new-color-handle-click-area] .addHandleIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.7em;
+  z-index: -1;
+
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+
+.colorHandleStopInputWrapper {
+  margin-top: 10px;
+}
+
+.colorHandleStopInputWrapper label {
+  margin-right: 5px;
+}
+
+.colorHandleStopInputWrapper input[type=number] {
+  width: 50px;
+}
+
+.error {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #f00;
+}
+
+.instructions {
+  margin: 25px 0 0;
+}
+
+.instructions .showLink,
+.instructions .hideLink {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+h2 {
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.instructions ul + h2,
+.gradientCodeWrapper pre + h2 {
+  margin-top: 20px;
+}
+
+.instructions ul {
+  list-style-type: disc;
+  margin: 15px 0 0 25px;
+}
+
+.instructions li + li {
+  margin: 5px 0 0;
+}
+
+.jPicker td {
+  vertical-align: top;
+}
+
+[color-picker] {
+  margin: 15px 0 0;
+}
+
+.gradientTypesAndPersistence {
+  text-align: left;
+}
+
+.gradientType {
+  display: inline-block;
+  margin: 0 5px;
+  line-height: 1em;
+}
+
+.gradientType label {
+  margin-left: 5px;
+}
+
+.persistBtns {
+  text-align: right;
+  float: right;
+}
+
+.persistBtns .btn {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 5px;
+
+  transition: 0.1s top linear;
+  -webkit-transition: 0.1s top linear;
+  -moz-transition: 0.1s top linear;
+  -o-transition: 0.1s top linear;
+}
+
+.persistBtns .btn:hover,
+.persistBtns .btn:active {
+  top: -2px;
+}
+
+.save {
+  background: url(../img/disk.png);
+}
+
+.saveAs {
+  background: url(../img/disk_multiple.png);
+}
+
+.delete {
+  background: url(../img/delete.png);
+}
+
+[slider] {
+  border: 1px solid #777;
+  background: #eee;
+  height: 6px;
+  margin: 12px 0;
+
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+[slider] .inner {
+  position: relative;
+  margin: 0 13px 0 2px;
+}
+
+[slider] .handle {
+  cursor: pointer;
+  border: 1px solid #444;
+  background: #aaa;
+  height: 26px;
+  position: absolute;
+  top: -11px;
+  left: 1%;
+  width: 9px;
+
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+[slider] .handle:focus,
+[slider] .handle:active {
+  background: #eee;
+}
+
+.sliderValueDisp {
+  float: right;
+}
+
+.sliderValueDisp input {
+  width: 50px;
+}
+
+.sliderValueDisp + label {
+  display: block;
+  clear: both;
+  margin-top: 20px;
+}
+
+.error.sliderValueDispError {
+  float: left;
+  line-height: 1.6em;
+}
+
+.presetsWrapper {
+  margin-top: 25px;
+}
+
+.preset {
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 1px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 15px 15px 0 0;
+}
+
+.preset:hover {
+  border-color: #888;
+}
+
+.preset.loaded {
+  border-color: #87ceeb;
+}
+
+.preset.loaded:hover {
+  border-color: navy;
+}
+
+.preset.dirty {
+  border-color: orange;
+}
+
+.preset.dirty:hover {
+  border-color: #ff4500;
+}
+
+.presetsWrapper h3 {
+  margin-top: 25px;
+}
+
+/* qTip overrides */
+.qtip {
+  font-size: 0.8em;
+}

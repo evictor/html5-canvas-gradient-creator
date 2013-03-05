@@ -1,0 +1,1 @@
+window.GradientCreatorApp = angular.module('GradientCreatorApp', ['LocalStorageModule'], ->);

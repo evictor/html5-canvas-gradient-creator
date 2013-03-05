@@ -1,0 +1,4 @@
+<Files build.sh>
+Order allow,deny
+Deny from all
+</Files>
