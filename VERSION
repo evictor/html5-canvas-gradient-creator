@@ -1,1 +1,8 @@
+1.0.1
+=====
+- Fixed CoffeeScript build script line endings.
+- Note in readme about CS build script.
+
 1.0
+===
+- Initial release.

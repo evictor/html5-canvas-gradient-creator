@@ -80,7 +80,7 @@ GradientCreatorApp.factory 'GradientPreset', (localStorageService) ->
       Deletes this preset from storage.
     ###
     delete: ->
-      throw "This preset isn't saveable." if not @deleteable
+      throw "This preset isn't deleteable." if not @deleteable
 
       # Get from storage
       SavedPresets = GradientPreset.query()

@@ -36,3 +36,7 @@ This is minimum compatibility for usage of this tool, as well as for gradient co
 * <a href="https://github.com/grevory/angular-local-storage">angular-local-storage</a>
 * <a href="http://craigsworks.com/projects/qtip2/">qTip</a> tooltips
 * <a href="https://github.com/somerandomdude/Iconic">Iconic</a> icons
+
+## Building the CoffeeScript
+
+See js/build.sh.
