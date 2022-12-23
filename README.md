@@ -1,6 +1,6 @@
 # Live app
 
-http://victorblog.com/html5-canvas-gradient-creator/
+https://zeke.blog/html5-canvas-gradient-creator-app/
 
 # HTML5 Canvas Gradient Creator
 
